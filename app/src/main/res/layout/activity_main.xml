@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/btnFragmento1"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Carga Fragmento 1"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,11 +21,23 @@
 
     <Button
         android:id="@+id/btnFragmento2"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Carga Fragmento 2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnFragmento3"
         app:layout_constraintStart_toEndOf="@id/btnFragmento1"
+        app:layout_constraintBottom_toBottomOf="@id/glTope"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnFragmento3"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Carga Fragmento 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnFragmento2"
         app:layout_constraintBottom_toBottomOf="@id/glTope"
         app:layout_constraintTop_toTopOf="parent">
 

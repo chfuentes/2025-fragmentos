@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             /*val fragmentTransaction : FragmentTransaction = fragmentManager.beginTransaction()
             fragmentTransaction.replace(R.id.flContainer, Frag1Fragment())
             fragmentTransaction.commit()*/
-            insertarFragmento(Frag1Fragment())
+            insertarFragmento(Frag1Fragment.newInstance("Christian"))
 
         }
 
@@ -35,6 +35,10 @@ class MainActivity : AppCompatActivity() {
             fragmentTransaction.commit()*/
             insertarFragmento(Frag2Fragment())
         }
+
+        binding.btnFragmento3.setOnClickListener {
+            insertarFragmento(Frag3Fragment())
+        }
     }
 
     private fun insertarFragmento(fragmento : Fragment) {
@@ -42,4 +46,14 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(binding.flContainer.id, fragmento)
         fragmentTransaction.commit()
     }
+
+    /*
+    En Android, los parámetros se pasan a través de un Bundle.
+    Un Bundle es como un "diccionario" donde puedes guardar datos clave-valor.
+
+    Normalmente, lo hacemos creando una instancia del fragmento usando un método newInstance.
+    Adaptar Frag1Fragment para que acepte parámetros
+    Agrega un companion object para crear el fragmento con argumentos:
+
+     */
 }
